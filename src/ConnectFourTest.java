@@ -1,11 +1,10 @@
 /**
  * ConnectFourTest tests the data backend ConnectFour class for
  * the ConnectFour project.
- * @author Julian Cochran
- * @version 01/29/2013
+ * @author 24levinson
+ * @version 05/08/23
  */
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 import java.util.*;
