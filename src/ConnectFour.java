@@ -5,14 +5,23 @@ public class ConnectFour implements BoardGame{
 
     private int winner;
 
-    @Override
+    /**
+     * Creates a new board
+     * Randomly decides who makes the first move
+     * Initializes winningPosition
+     */
     public void newGame() {
         board = new int[6][7];
         currentPlayer = 1 + (int)(Math.random()*2);
         winningPosition = new Position[4];
     }
 
-    @Override
+    /**
+     * method for determining if the game is over
+     * It starts at the bottom left of the board and works its was up and over, checking if there are 4 of the same player in a row
+     * calls on 3 private methods that check to see if there are 4 in a row, column or diagonal
+     * @return true if the game is over, false otherwise
+     */
     public boolean gameOver() {
         for(int r = board.length-1; r >= 0; r--)   {
             for(int c = 0; c < board[r].length; c++)    {
@@ -103,22 +112,33 @@ public class ConnectFour implements BoardGame{
         return false;
     }
 
-    @Override
+    /**
+     * @return the winning player
+     */
     public int getWinner() {
         return winner;
     }
 
-    @Override
+    /**
+     * @return an array with the indexes of the 4 winning positions held in a Position object
+     */
     public Position[] getWinningPositions() {
         return winningPosition;
     }
 
-    @Override
+    /**
+     * finds if the top of a column is full or not
+     * @param column the column number
+     * @return true if the column is full, false otherwise
+     */
     public boolean columnFull(int column) {
         return board[0][column] != 0;
     }
 
-    @Override
+    /**
+     * Allows the player to make their turn if the column is not full, then switches players
+     * @param column the column number
+     */
     public void play(int column) {
         if(!columnFull(column)) {
             // go to bottom row, work up to find open spot
@@ -132,11 +152,16 @@ public class ConnectFour implements BoardGame{
         }
     }
 
-    @Override
+    /**
+     * @return the board as a double array
+     */
     public int[][] getBoard() {
         return board;
     }
 
+    /**
+     * @return the current player
+     */
     public int getCurrentPlayer(){
     return currentPlayer;
     }

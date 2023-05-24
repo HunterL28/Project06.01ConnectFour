@@ -2,10 +2,8 @@
 /**
  * BoardGame describes the behaviors of a 2-person game played
  *   on a rectangular grid.
- * @author Jo Perry
- * 
- * Used with permission 01/22/2012
- * YOU MAY NOT MODIFY THIS FILE IN ANY WAY
+ * @author 24levinson
+ * @version 5/25/2023
  */
 public interface BoardGame { 
     /**

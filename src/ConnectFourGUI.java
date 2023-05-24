@@ -8,9 +8,9 @@ import javax.swing.*;
 
 /**
  * ConnectFourGUI drives the GUI for the ConnectFour game.
- * 
- * @author Julian Cochran (julian.cochran@da.org)
- * @version 1.0 (02/20/2012)
+ * @author 24levinson
+ * @version 05/25/2023
+ * Borrowed from Coach Cochran
  */
 public class ConnectFourGUI extends JFrame implements ActionListener {
 	
