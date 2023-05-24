@@ -1,3 +1,9 @@
+/**
+ * Initializes all the data for a new game and uses methods that are called to help with the progression of Connect Four
+ * Some methods return data that is used to determine what should happen next in the ConnectFour game (like a rule book)
+ * @author 24levinson
+ * @version 5/25/2023
+ */
 public class ConnectFour implements BoardGame{
     private int[][] board;
     private int currentPlayer;
